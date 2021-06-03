@@ -4,11 +4,14 @@
 // I AM NOT DONE
 
 fn main() {
-    call_me();
+    let x=call_me(4);
+    println!("Number passed is : {}",x);    
 }
 
-fn call_me(num: u32) {
+fn call_me(num: u32)->i32 {
     for i in 0..num {
         println!("Ring! Call number {}", i + 1);
     }
+    let b = num as i32;
+    b
 }
