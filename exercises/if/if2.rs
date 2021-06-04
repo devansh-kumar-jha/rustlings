@@ -6,12 +6,23 @@
 
 // I AM NOT DONE
 
+use std::io;
+
 pub fn fizz_if_foo(fizzish: &str) -> &str {
-    if fizzish == "fizz" {
-        "foo"
-    } else {
-        1
-    }
+    if fizzish=="fizz\n" { "foo" }                   // \n is used presuming that the user presses enter to give the input 
+                                                     // code was checked on VS code where input is given side by side :)
+    else if fizzish=="foo\n" { "fizz" }
+    else { fizzish }
+}
+
+fn main() {
+    let mut input = String::new();
+    println!("Enter the string");
+    io::stdin()
+        .read_line(&mut input)
+        .expect("Not correct input :( !!!"); 
+    
+    println!("Result : {}",fizz_if_foo(&input));    
 }
 
 // No test changes needed!

@@ -5,11 +5,19 @@
 // I AM NOT DONE
 
 fn main() {
-    let a = ???
+    let a : [i32;100] = [0;100];
 
     if a.len() >= 100 {
         println!("Wow, that's a big array!");
     } else {
         println!("Meh, I eat arrays like that for breakfast.");
     }
+
+    for i in 0..100 {
+        if i%10 == 0 && i!=0 { println!(""); }
+        else {}
+        print!("{} ",a[i]);
+    }
+
+    println!("");
 }
