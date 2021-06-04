@@ -3,9 +3,17 @@
 
 // I AM NOT DONE
 
+use std::io;
+
 fn main() {
-    let x;
-    if x == 10 {
+    let mut x=String::new();
+    
+    println!("Enter your number");
+    io::stdin()
+        .read_line(&mut x)
+        .expect("Failed to read line :( !!!");
+
+    if &x == "10\n" {
         println!("Ten!");
     } else {
         println!("Not ten!");
