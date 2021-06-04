@@ -1,7 +1,5 @@
 // if1.rs
 
-// I AM NOT DONE
-
 use std::io;
 
 pub fn bigger(a: i32, b: i32) -> i32 {
