@@ -9,6 +9,10 @@ struct ColorClassicStruct {
 
 struct ColorTupleStruct(/* TODO: Something goes here */);
 
+fn main() {
+    
+}
+
 #[derive(Debug)]
 struct UnitStruct;
 
