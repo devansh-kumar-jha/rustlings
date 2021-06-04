@@ -8,8 +8,8 @@
 fn main() {
     let mut x = 100;
     let y = &mut x;
-    let z = &mut *y;
-    *y += 100;
+    *y += 100;                                // This requires that y is owned by main but 
+    let z = &mut *y;                          // after let z = &mut *y  we cannot use *y  as it is borrowed
     *z += 1000;
     assert_eq!(x, 1200);
 }
