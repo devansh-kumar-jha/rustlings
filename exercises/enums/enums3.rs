@@ -42,10 +42,10 @@ impl State {
     fn process(&mut self, message: Message) {
         // TODO: create a match expression to process the different message variants
         match message {
-            Message :: Quit =>  self.quit(),
-            Message :: ChangeColor((u8,u8,u8)) =>  self.change_color(message),
-            Message :: Echo(String) =>  self.echo(message),
-            Message :: Move(Point) =>  self.move_position(message),
+            Message :: Quit => { self.quit();  }  
+            Message :: ChangeColor(val) => { self.change_color(val); }     
+            Message :: Echo(val) =>  {  self.echo(val);  }   
+            Message :: Move(val) =>  {  self.move_position(val);  }    
         }
     }
 }
